@@ -17,9 +17,9 @@ spec:
         image: alpine:latest
         env:
           - name: APPNAME
-            value: "ghost-newns-argocd"
+            value: "ghost-argocd"
           - name: NAMESPACE
-            value: "ghost-newns"
+            value: "ghost"
           - name: LABEL
             value: "volume=persistent"
           - name: CLUSTERNAME
