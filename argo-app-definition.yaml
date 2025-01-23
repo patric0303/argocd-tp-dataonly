@@ -9,7 +9,7 @@ spec:
     server: 'https://kubernetes.default.svc'
   source:
     path: ghost
-    repoURL: 'https://github.com/YourUsername/argocd-astra-dataonly'
+    repoURL: 'https://github.com/YourUsername/argocd-tp-dataonly'
     targetRevision: HEAD
   project: default
   syncPolicy:
