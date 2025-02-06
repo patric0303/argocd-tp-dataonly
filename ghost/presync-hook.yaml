@@ -13,11 +13,9 @@ spec:
         image: alpine/k8s:1.31.5
         env:
           - name: APPNAME
-            value: "ghost-argocd"
+            value: "ghost"
           - name: NAMESPACE
             value: "ghost"
-          - name: CLUSTERNAME
-            value: "aks-pu-test1-cluster"
           - name: APPVAULT
             value: "argocdtest"
           - name: TP_CLI_VERSION
