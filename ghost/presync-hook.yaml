@@ -12,14 +12,14 @@ spec:
       - name: alpine-tp
         image: alpine/k8s:1.31.5
         env:
-          - name: APPNAME
-            value: "ghost"
-          - name: NAMESPACE
-            value: "ghost"
-          - name: APPVAULT
-            value: "argocdtest"
-          - name: TP_CLI_VERSION
-            value: "24.10.1"
+        - name: APPNAME
+          value: "ghost"
+        - name: NAMESPACE
+          value: "ghost"
+        - name: APPVAULT
+          value: "argocdtest"
+        - name: TP_CLI_VERSION
+          value: "24.10.1"
         command: ["/bin/sh"]
         args:
           - -c
