@@ -24,10 +24,11 @@ spec:
         args:
           - -c
           - >
+            echo $TP_CLI_VERSION &&
             curl -L -o tridentctl-protect https://github.com/NetApp/tridentctl-protect/releases/download/$TP_CLI_VERSION/tridentctl-protect-linux-amd64 &&
             chmod +x tridentctl-protect &&
             cp ./tridentctl-protect /usr/local/bin/ &&
             echo tridentctl-protect: backing up app $APPNAME &&
-            tridentctl-protect create backup argo-presync-`date "+%Y%m%d%H%M%S"` --app $APPNAME --appvault $APPVAULT -n $NAMESPACE &&
+            tridentctl-protect create backup argo-presync-`date "+%Y%m%d%H%M%S"` --app $APPNAME --appvault $APPVAULT -n $NAMESPACE
       restartPolicy: Never
   backoffLimit: 1
