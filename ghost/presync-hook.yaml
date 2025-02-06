@@ -24,14 +24,11 @@ spec:
         args:
           - -c
           - >
-            echo Environment variables: $APPNAME $NAMESPACE $APPVAULT $TP_CLI_VERSION &&
-            echo curl -L -o tridentctl-protect https://github.com/NetApp/tridentctl-protect/releases/download/$TP_CLI_VERSION/tridentctl-protect-linux-amd64 &&
-            curl -L -o tridentctl-protect https://github.com/NetApp/tridentctl-protect/releases/download/24.10.1/tridentctl-protect-linux-amd64 &&
+            curl -L -o tridentctl-protect https://github.com/NetApp/tridentctl-protect/releases/download/$TP_CLI_VERSION/tridentctl-protect-linux-amd64 &&
+            echo curl -L -o tridentctl-protect https://github.com/NetApp/tridentctl-protect/releases/download/24.10.1/tridentctl-protect-linux-amd64 &&
             chmod +x tridentctl-protect &&
             cp ./tridentctl-protect /usr/local/bin/ &&
-            which tridentctl-protect &&
-            echo tridentctl-protect: backing up app $APPNAME &&
-            echo tridentctl-protect create backup argo-presync-`date "+%Y%m%d%H%M%S"` --app $APPNAME --appvault $APPVAULT -n $NAMESPACE &&
+            tridentctl-protect version &&
             tridentctl-protect get application -n ghost &&
             tridentctl-protect create backup argo-presync-`date "+%Y%m%d%H%M%S"` --app ghost --appvault argocdtest -n ghost
       restartPolicy: Never
