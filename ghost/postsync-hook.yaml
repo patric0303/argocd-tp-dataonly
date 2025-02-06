@@ -55,7 +55,7 @@ spec:
       serviceAccountName: tp-user
       containers:
       - name: alpine-tp
-        image: alpine/k8s:1.31. 5
+        image: alpine/k8s:1.31.5
         env:
           - name: APPNAME
             value: "ghost-argocd"
